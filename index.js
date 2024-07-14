@@ -19,11 +19,11 @@ const app = express();
 const port = 5000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
-app.get("/", (req, res) => {
+app.get("https://emailsendingapplication.onrender.com/", (req, res) => {
   res.sendFile(__dirname + "/form.html");
 });
 
-app.post("/send-email", (req, res) => {
+app.post("https://emailsendingapplication.onrender.com/send-email", (req, res) => {
   const { email, subject, message } = req.body;
   console.log(req.body);
   const transporter = nodemailer.createTransport({
@@ -69,7 +69,7 @@ app.post("/send-email", (req, res) => {
           <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Confetti Demo</title>
+            <title>Congratulations</title>
             <style>
               body {
                 margin: 0;
@@ -118,5 +118,5 @@ app.post("/send-email", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
+  console.log("server is running on port 5000");
 });
