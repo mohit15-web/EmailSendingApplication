@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confetti Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
+    <span class="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
+      Congratulations
+    </span>
+    <img src="./images/undraw_celebrating_rtuv.svg" alt="Celebrating" style="object-fit: contain; width: 500px; height: 500px;">
+    <div class="confetti-container absolute left-0 top-0 z-0 size-full"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
