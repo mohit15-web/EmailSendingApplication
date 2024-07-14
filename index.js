@@ -19,11 +19,12 @@ const app = express();
 const port = 5000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
-app.get("https://emailsendingapplication.onrender.com/fillForm", (req, res) => {
+
+app.get("/fillForm", (req, res) => {
   res.sendFile(__dirname + "/form.html");
 });
 
-app.post("https://emailsendingapplication.onrender.com/send-email", (req, res) => {
+app.post("/send-email", (req, res) => {
   const { email, subject, message } = req.body;
   console.log(req.body);
   const transporter = nodemailer.createTransport({
